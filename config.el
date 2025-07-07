@@ -28,20 +28,19 @@
 ;; up, `m-x eval-region' to execute elisp code, and 'm-x doom/reload-font' to
 ;; refresh your font settings. if emacs still can't find your font, it likely
 ;; wasn't installed correctly. font issues are rarely doom issues!
-(setq doom-font (font-spec :family "monaco" :size 13))
 
 ;; there are two ways to load a theme. both assume the theme is installed and
 ;; available. you can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. this is the default:
-(setq doom-theme 'doom-one)
+;; (setq doom-theme 'doom-one)
 
 ;; this determines the style of line numbers in effect. if set to `nil', line
 ;; numbers are disabled. for relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+;; (setq display-line-numbers-type t)
 
 ;; if you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. it must be set before org loads!
-(setq org-directory "~/org/")
+;; (setq org-directory "~/org/")
 
 
 ;; whenever you reconfigure a package, make sure to wrap your config in an
@@ -77,13 +76,15 @@
 ;; they are implemented.
 
 
+;; ===============================================================
+;;
+;;                      Universal Configuration
+;;
+;; ===============================================================
 
-;; -------------------------
-;; mac os keyboard setting
-;; -------------------------
-(when (eq system-type 'darwin)
-  (setq mac-right-option-modifier 'meta)
-  (setq mac-left-option-modifier 'none)) ; optional
+(setq doom-theme 'doom-one)                 ;; set the theme
+(setq display-line-numbers-type t)          ;; set the line number
+(setq org-directory "~/org/")               ;; set the org directory
 
 ;; --------------------
 ;; reset the escape key
@@ -95,3 +96,17 @@
   (key-chord-mode 1)
   (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
   (key-chord-define evil-visual-state-map "jj" 'evil-normal-state))
+
+
+;; ===================================================================
+;;
+;;                       Mac OS Configuration
+;;
+;; ===================================================================
+;; -------------------------
+;; mac os keyboard setting
+;; -------------------------
+(when (eq system-type 'darwin)
+  (setq doom-font (font-spec :family "monaco" :size 13))  ;; set the font
+  (setq mac-right-option-modifier 'meta)                  ;; map the key
+  (setq mac-left-option-modifier 'none))
