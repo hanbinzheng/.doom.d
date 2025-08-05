@@ -125,7 +125,21 @@ It combines Emacs Lisp extensibility, Vim's editing efficiency, and Doom Emacs's
 
 ## 📂 Installation
 
-First, make sure Doom Emacs is installed by following [the official getting started guide](https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#install).
+First, make sure your emacs is installed by following [the official getting started guide](https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#install). You should install the correct version. 
+
+After that, install the basic doom emacs. 
+
+```bash
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+```
+
+It's recommended to add `~/.emacs.d/bin/` into your `$PATH`, so that you can directly use `doom` command instead of running `~/.emacs.d/bin/doom`. Here is an example on zsh. 
+
+```bash
+echo 'export PATH="$HOME/.emacs.d/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
 
 Then remove your original `.doom.d/`, clone this repository, and run `doom sync`.
 
@@ -133,3 +147,4 @@ Then remove your original `.doom.d/`, clone this repository, and run `doom sync`
 rm -rf ~/.doom.d
 git clone git@github.com:hanbinzheng/.doom.d.git ~/.doom.d
 doom sync
+```
