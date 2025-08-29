@@ -115,12 +115,15 @@
   ;; org-agenda configuration only on mac (daily usage machine)
   ;; ----------------------------------------------------------
   (after! org
+    ;; list where to find the org agenda
     (setq org-agenda-files
           '("~/org/inbox.org"
             "~/org/agenda.org"
             "~/org/study/toefl/vocab.org"))
 
-    (map! :map org-mode-map
-          :desc "Insert inactive timestamp"
-          "C-c t" #'org-timestamp-inactive))
+    ;; map the inactive timestamp
+    (with-eval-after-load 'org
+      (define-key org-mode-map (kbd "C-c t") #'org-timestamp-inactive))
+
+  )
 )
