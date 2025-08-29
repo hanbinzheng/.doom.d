@@ -92,7 +92,7 @@
 (use-package! key-chord
   :after evil
   :config
-  (setq key-chord-two-keys-delay 0.2) ;; jj must be completed within 0.2 s
+  (setq key-chord-two-keys-delay 0.1) ;; jj must be completed within 0.1 s
   (key-chord-mode 1)
   (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
   (key-chord-define evil-visual-state-map "jj" 'evil-normal-state))
@@ -103,10 +103,24 @@
 ;;                       Mac OS Configuration
 ;;
 ;; ===================================================================
-;; -------------------------
-;; mac os keyboard setting
-;; -------------------------
 (when (eq system-type 'darwin)
+  ;; -------------------------
+  ;; mac os keyboard setting
+  ;; -------------------------
   (setq doom-font (font-spec :family "monaco" :size 13))  ;; set the font
   (setq mac-right-option-modifier 'meta)                  ;; map the key
-  (setq mac-left-option-modifier 'none))
+  (setq mac-left-option-modifier 'none)
+
+  ;; ----------------------------------------------------------
+  ;; org-agenda configuration only on mac (daily usage machine)
+  ;; ----------------------------------------------------------
+  (after! org
+    (setq org-agenda-files
+          '("~/org/inbox.org"
+            "~/org/agenda.org"
+            "~/org/study/toefl/vocab.org"))
+
+    (map! :map org-mode-map
+          :desc "Insert inactive timestamp"
+          "C-c t" #'org-timestamp-inactive))
+)
