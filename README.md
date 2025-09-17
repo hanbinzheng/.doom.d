@@ -1,25 +1,26 @@
-# 🧨 Doom Emacs Configuration
+# Doom Emacs Configuration
 
-> "The best editor isn’t Emacs, nor Vim. It’s Doom"
+> "The best editor isn’t Emacs, not Vim, even I use Doom. And I plan to switch to Centaur Emacs."
 
 This is my cross-platform (macOS + Ubuntu) Doom Emacs configuration.  
 It combines Emacs Lisp extensibility, Vim's editing efficiency, and Doom Emacs's streamlined keybinding system.
 
 ---
 
-## ✨ Features
+## Features
 
-- **Evil-mode**: Modal editing with full Vim keybindings (`hjkl`, `:wq`, `gg`, etc.).
+- **Evil-mode**: Modal editing with full Vim keybindings.
 - **Space-leader control**: High-level command access via `SPC`, Doom's minimalistic keybinding philosophy.
 - **LSP support**: Built-in support for `clangd` and `pyright` via `lsp-mode`.
-- **Magit**: Full Git porcelain within Emacs (`SPC g g`).
-- **Treemacs**: Project drawer for easy navigation (`SPC o p`).
+- **Org**: organize, and $\LaTeX$ size setting.
+- **Magit**: Full Git porcelain within Emacs.
+- **Treemacs**: Project drawer for easy navigation.
 - **Cross-platform**: Custom macOS keyboard mapping included, compatible with Linux.
 - **Custom Escape key**: `jj` acts as Escape in insert/visual modes (via the `key-chord` package).
 
 ---
 
-## 📦 Modules Enabled
+## Modules Enabled
 
 - **Completion**: `vertico`, `corfu +orderless`
 - **UI**: `doom`, `treemacs`, `modeline`, `vc-gutter`, `workspaces`
@@ -35,30 +36,15 @@ It combines Emacs Lisp extensibility, Vim's editing efficiency, and Doom Emacs's
 
 ---
 
-## 🎮 Keybindings Summary
+## Keybindings Summary
 
-### 🧠 Vim Editing (Evil-mode)
-
-| Command        | Key                    |
-| -------------- | ---------------------- |
-| Move cursor    | `h/j/k/l`              |
-| Line start/end | `0`, `$`               |
-| Word jump      | `w`, `b`, `e`          |
-| Insert mode    | `i`, `a`, `I`, `A`     |
-| Delete         | `x`, `dd`, `d{motion}` |
-| Yank/Copy      | `yy`, `y{motion}`      |
-| Paste          | `p`, `P`               |
-| Undo / Redo    | `u`, `C-r`             |
-| Visual Mode    | `v`, `V`, `C-v`        |
-| Window jump    | `C-w h/j/k/l`          |
-| Split window   | `:vsp`, `:sp`          |
-| Close split    | `:q`                   |
+### Vim Editing (Evil-mode)
 
 ---
 
-### 🔧 Doom Emacs (`SPC` Leader Key)
+### Doom (`SPC` Leader Key)
 
-#### 📁 File & Project
+#### File & Project
 
 | Command        | Key       |
 | -------------- | --------- |
@@ -68,34 +54,15 @@ It combines Emacs Lisp extensibility, Vim's editing efficiency, and Doom Emacs's
 | Project switch | `SPC p p` |
 | Project grep   | `SPC /`   |
 
-#### 📑 Buffer & Window
 
-| Command             | Key       |
-| ------------------- | --------- |
-| Buffer switch       | `SPC b b` |
-| Kill current buffer | `SPC b d` |
-| Toggle file tree    | `SPC o p` |
-| Split (horizontal)  | `SPC w s` |
-| Split (vertical)    | `SPC w v` |
-| Focus other window  | `SPC w w` |
-
-#### 🔍 LSP Integration
-
-| Command          | Key       |
-| ---------------- | --------- |
-| Go to definition | `g d`     |
-| Find references  | `g r`     |
-| Show hover doc   | `K`       |
-| Format buffer    | `SPC c f` |
-
-#### 🐙 Git (Magit)
+#### Git (Magit)
 
 | Command    | Key       |
 | ---------- | --------- |
 | Open Magit | `SPC g g` |
 | Git blame  | `SPC g b` |
 
-#### ⚙️ Config & Help
+#### Config & Help
 
 | Command             | Key         |
 | ------------------- | ----------- |
@@ -106,16 +73,18 @@ It combines Emacs Lisp extensibility, Vim's editing efficiency, and Doom Emacs's
 
 ---
 
-## 🔸 Minimal Emacs Keybindings (Retained)
+## Minimal Emacs Keybindings (Retained)
 
 | Command         | Key   | Purpose                   |
 | --------------- | ----- | ------------------------- |
 | Execute command | `M-x` | Always available fallback |
 | Cancel command  | `C-g` | Universal cancel/abort    |
 
+Use vim-key setting at most. 
+
 ---
 
-## 🔁 Cross-platform Notes
+## Cross-platform Notes
 
 - On **macOS**, `Right Option` is mapped to `Meta`, `Left Option` is disabled.
 - `jj` acts as Escape in insert/visual modes (via the `key-chord` package).
@@ -123,7 +92,7 @@ It combines Emacs Lisp extensibility, Vim's editing efficiency, and Doom Emacs's
 
 ---
 
-## 📂 Installation
+## Installation
 
 First, make sure your emacs is installed by following [the official getting started guide](https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#install). You should install the correct version. 
 
