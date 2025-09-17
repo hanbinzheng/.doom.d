@@ -1,6 +1,6 @@
 # Doom Emacs Configuration
 
-> "The best editor isn’t Emacs, not Vim, even I use Doom. And I plan to switch to Centaur Emacs."
+> "The best editor is Emacs, not Vim, even I use Doom. And I plan to switch to Centaur Emacs."
 
 This is my cross-platform (macOS + Ubuntu) Doom Emacs configuration.  
 It combines Emacs Lisp extensibility, Vim's editing efficiency, and Doom Emacs's streamlined keybinding system.
